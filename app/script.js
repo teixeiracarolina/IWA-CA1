@@ -36,8 +36,9 @@ function getList() {
     });
 }
 
-// this method will be used to create new book
+// method used to add a new book to directory
 function add() {
+
     // getting data from input controls
     let title = document.getElementById('txt-title').value;
     let author = document.getElementById('txt-author').value;
