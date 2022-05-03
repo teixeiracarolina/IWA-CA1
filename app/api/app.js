@@ -14,6 +14,13 @@ mongoose.connect(CONNECTION_STRING);
 
 var Book = require('./models/book');
 
+app.get('/', function(req,res) {
+    res.sendFile('index.html', { root: '../' });
+});
+
+app.get('/new', function(req,res) {
+    res.sendFile('new.html', { root: '../' });
+});
 
 //get all book data from db
 app.get('/api/books', function (req, res) {
