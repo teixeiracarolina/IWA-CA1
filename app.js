@@ -15,11 +15,11 @@ mongoose.connect(CONNECTION_STRING);
 var Book = require('./models/book');
 
 app.get('/', function(req,res) {
-    res.sendFile('index.html', { root: '../' });
+    res.sendFile('index.html', { root: '.' });
 });
 
 app.get('/new', function(req,res) {
-    res.sendFile('new.html', { root: '../' });
+    res.sendFile('new.html', { root: '.' });
 });
 
 //get all book data from db
@@ -96,5 +96,5 @@ app.delete('/api/books/:book_id', function (req, res) {
 
 // start the ExpressJS server
 app.listen(port);
-app.use('/static', express.static('../assets'))
+app.use('/static', express.static('assets'))
 console.log("App listening on port : " + port);
