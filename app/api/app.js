@@ -89,4 +89,5 @@ app.delete('/api/books/:book_id', function (req, res) {
 
 // start the ExpressJS server
 app.listen(port);
+app.use('/static', express.static('../assets'))
 console.log("App listening on port : " + port);
