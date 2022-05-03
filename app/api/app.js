@@ -9,7 +9,7 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ 'extended': 'true' }));
 app.use(bodyParser.json());
 
-const CONNECTION_STRING = `mongodb://localhost:27017/books`;
+const CONNECTION_STRING = `mongodb+srv://tcarolina:123@cluster0.7jzyy.mongodb.net/book?retryWrites=true&w=majority`
 mongoose.connect(CONNECTION_STRING);
 
 var Book = require('./models/book');
