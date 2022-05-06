@@ -1,6 +1,6 @@
 
 // API URL
-const API_URL = `http://localhost:8000/api/books`;
+const API_URL = `/api/books`;
 
 // this function will be used to fetch all books from API
 function getList() {
